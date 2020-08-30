@@ -6,7 +6,7 @@ pipeline {
                 sh "tidy -q -e *.html"
             }
         }
-        stage("deploy"){
+        stage("Upload to AWS"){
             steps{
                 echo "Deploying ${BRANCH_NAME}"
                 echo "Deploying application"
